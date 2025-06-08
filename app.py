@@ -57,12 +57,13 @@ if st.button("Prediksi Pertumbuhan"):
     prediction = model.predict(input_data)[0]
 
     # Hasil prediksi dengan warna
-    if prediction == 'Good Growth':
-        color = 'green'
-    elif prediction == 'Normal':
-        color = 'orange'
-    else:  # Poor Growth
-        color = 'red'
-
     st.subheader("Hasil Prediksi:")
-    st.markdown(f"<h3 style='color:{color}'>{prediction}</h3>", unsafe_allow_html=True)
+
+    if prediction == 'Good Growth':
+        st.success("🌿 Pertumbuhan Bagus (Good Growth)")
+    elif prediction == 'Normal':
+        st.warning("⚠️ Pertumbuhan Normal (Normal)")
+    elif prediction == 'Poor Growth':
+        st.error("❌ Pertumbuhan Terhambat (Poor Growth)")
+    else:
+        st.info(f"Pertumbuhan tidak diketahui: {prediction}")
