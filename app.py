@@ -57,7 +57,7 @@ if st.button("Prediksi Pertumbuhan"):
     prediction = model.predict(input_data)[0]
 
     # Hasil prediksi dengan warna
-    if prediction == 'Good Growth':
+    if prediction == 'Good':
         color = 'green'
     elif prediction == 'Normal':
         color = 'orange'
