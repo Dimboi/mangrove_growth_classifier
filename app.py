@@ -1,4 +1,5 @@
 # app.py
+
 import streamlit as st
 import pandas as pd
 import joblib
@@ -55,6 +56,13 @@ if st.button("Prediksi Pertumbuhan"):
     # Prediksi
     prediction = model.predict(input_data)[0]
 
-    # Hasil prediksi
+    # Hasil prediksi dengan warna
+    if prediction == 'Good Growth':
+        color = 'green'
+    elif prediction == 'Normal':
+        color = 'orange'
+    else:  # Poor Growth
+        color = 'red'
+
     st.subheader("Hasil Prediksi:")
-    st.success(f"Mangrove ini diprediksi mengalami pertumbuhan: **{prediction}**")
+    st.markdown(f"<h3 style='color:{color}'>{prediction}</h3>", unsafe_allow_html=True)
