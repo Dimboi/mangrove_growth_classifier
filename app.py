@@ -16,6 +16,7 @@ st.header("Masukkan Data Mangrove")
 tinggi = st.number_input(
     "Berapa tinggi mangrove? (cm)",
     min_value=0.0,
+    max_value=5000.0,
     step=0.1
 )
 
@@ -27,12 +28,14 @@ daun = st.number_input(
 diameter = st.number_input(
     "Berapa cm diameter batang mangrove saat ini?",
     min_value=0.0,
+    max_value=8.0,
     step=0.01
 )
 
 akar_udara = st.number_input(
     "Berapa jumlah akar udara yang terlihat?",
-    min_value=0
+    min_value=0,
+    max_value=25
 )
 
 tahun_tanam = st.number_input(
