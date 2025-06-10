@@ -14,9 +14,9 @@ st.title("Prediction of the growth of Rhizophora stylosa mangrove type.")
 st.header("Mangrove Data Input")
 
 tinggi = st.number_input(
-    "How tall are the mangroves now? (max 5000 cm)",
+    "How tall are the mangroves now? (max 1500 cm)",
     min_value=0.0,
-    max_value=5000.0,
+    max_value=1500.0,
     step=0.1
 )
 
