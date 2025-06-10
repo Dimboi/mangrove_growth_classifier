@@ -25,7 +25,7 @@ daun = st.number_input(
 )
 
 diameter = st.number_input(
-    "What is the current diameter of the mangrove stem? (max 8cm)",
+    "What is the current diameter of the mangrove stem?",
     min_value=0.0,
     step=0.01
 )
@@ -62,7 +62,7 @@ if st.button("growth prediction"):
     if prediction == 'bagus':
         st.success("🌿 Pertumbuhan Bagus (Good Growth)")
     elif prediction == 'biasa saja':
-        st.warning("⚠️ Pertumbuhan Normal (Normal)")
+        st.warning("⚠️ Pertumbuhan Normal (Normal Growth)")
     elif prediction == 'jelek':
         st.error("❌ Pertumbuhan Terhambat (Poor Growth)")
     else:
