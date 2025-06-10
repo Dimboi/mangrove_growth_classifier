@@ -46,7 +46,7 @@ tahun_tanam = st.number_input(
 )
 
 # Tombol prediksi
-if st.button("Prediksi Pertumbuhan"):
+if st.button("growth prediction"):
     # Dataframe input
     input_data = pd.DataFrame({
         'Tinggi (cm)': [tinggi],
@@ -60,7 +60,7 @@ if st.button("Prediksi Pertumbuhan"):
     prediction = model.predict(input_data)[0]
 
     # Hasil prediksi dengan warna
-    st.subheader("Hasil Prediksi:")
+    st.subheader("Prediction Results:")
 
     if prediction == 'Good Growth':
         st.success("🌿 Pertumbuhan Bagus (Good Growth)")
