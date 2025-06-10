@@ -11,35 +11,35 @@ model = joblib.load('mangrove_growth_model.pkl')
 st.title("Mangrove Growth")
 
 # Sidebar input
-st.header("Masukkan Data Mangrove")
+st.header("Mangrove Data Input")
 
 tinggi = st.number_input(
-    "Berapa tinggi mangrove?(cm) max5000cm",
+    "How tall are the mangroves now? (max 5000 cm)",
     min_value=0.0,
     max_value=5000.0,
     step=0.1
 )
 
 daun = st.number_input(
-    "Berapa kira kira jumlah daun yang terlihat?",
+    "How many leaves are visible?",
     min_value=0
 )
 
 diameter = st.number_input(
-    "Berapa cm diameter batang mangrove saat ini? max8cm",
+    "What is the current diameter of the mangrove stem? (max 8cm)",
     min_value=0.0,
     max_value=8.0,
     step=0.01
 )
 
 akar_udara = st.number_input(
-    "Berapa jumlah akar udara yang terlihat? max25",
+    "How many aerial roots are visible? (max 25)",
     min_value=0,
     max_value=25
 )
 
 tahun_tanam = st.number_input(
-    "Tahun berapakah tanaman ini ditanam?",
+    "In what year was this mangrove tree planted?",
     min_value=2000,
     max_value=2030,
     step=1
