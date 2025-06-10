@@ -8,7 +8,7 @@ import joblib
 model = joblib.load('mangrove_growth_model.pkl')
 
 # Judul aplikasi
-st.title("Mangrove Growth")
+st.title("Prediction of the growth of Rhizophora stylosa mangrove type.")
 
 # Sidebar input
 st.header("Mangrove Data Input")
